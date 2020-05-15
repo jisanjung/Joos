@@ -1,0 +1,34 @@
+@mixin flex-x($arrange) {
+    display: flex;
+
+    @if ($arrange == "start") {
+        justify-content: start;
+    } @else if ($arrange == "end") {
+        justify-content: end;
+    } @else if ($arrange == "center") {
+        justify-content: center;
+    } @else if ($arrange == "between") {
+        justify-content: space-between;
+    } @else if ($arrange == "around") {
+        justify-content: space-around;
+    } @else if ($arrange == "even") {
+        justify-content: space-evenly;
+    }
+}
+@mixin flex-y($arrange) {
+    display: flex;
+
+    @if ($arrange == "start") {
+        align-content: flex-start;
+    } @else if ($arrange == "end") {
+        align-content: flex-end;
+    } @else if ($arrange == "center") {
+        align-content: center;
+    } @else if ($arrange == "between") {
+        align-content: space-between;
+    } @else if ($arrange == "around") {
+        align-content: space-around;
+    } @else if ($arrange == "even") {
+        align-content: space-evenly;
+    }
+}

@@ -1,8 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACIA,AAAA,CAAC,AAAC,CEHE,UAAU,CAAE,UAAU,CACtB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,IAAI,CAChB,eAAe,CAAE,IAAI,CFCxB",
     "sources": [
-        "../src/main.scss"
+        "../src/sass/main.scss",
+        "../src/sass/pages/_home.scss",
+        "../src/sass/utils/_variables.scss",
+        "../src/sass/utils/_mixins.scss",
+        "../src/sass/layout/_flex.scss"
     ],
     "names": [],
     "file": "main.min.css"
