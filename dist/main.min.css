@@ -1,2 +1,2 @@
-*{box-sizing:border-box;margin:0;padding:0;list-style:none;text-decoration:none}
+html,body{max-width:100%;overflow-x:hidden}*{box-sizing:border-box;margin:0;padding:0;list-style:none;text-decoration:none}main{margin:0 auto;max-width:90%}main .mobile-nav{width:236px;position:absolute;top:0;bottom:0;right:-236px}main header{display:flex;justify-content:space-between}main header .logo{width:67px}main header .logo img{width:100%}main header .desktop-nav{display:none}@media screen and (min-width: 1024px){main header .desktop-nav{display:block}}
 /*# sourceMappingURL=main.min.css.map */
