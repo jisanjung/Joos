@@ -1,0 +1,38 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../layout/flex";
+
+* {
+    @include reset();
+}
+
+main {
+    .mobile-nav {
+        width: 236px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -236px;
+    }
+    header {
+        .header-wrap {
+            @include container(small);
+            @include flex-x(between);
+        }
+        .logo {
+            width: 67px;
+            img {
+                width: 100%;
+            }
+        }
+        .desktop-nav {
+            display: none;
+            @include media-query(1024px) {
+                display: block;
+            }
+        }
+        .hamburger {
+            @include center(y, relative);
+        }
+    }
+}

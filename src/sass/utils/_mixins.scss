@@ -23,17 +23,17 @@ html, body {
     }
 }
 
-@mixin center($direction) {
+@mixin center($direction, $position) {
     @if ($direction == "y") {
-        position: absolute;
+        position: $position;
         top: 50%;
         transform: translateY(-50%);
     } @else if ($direction == "x") {
-        position: absolute;
+        position: $position;
         left: 50%;
         transform: translateX(-50%);
     } @else {
-        position: absolute;
+        position: $position;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
