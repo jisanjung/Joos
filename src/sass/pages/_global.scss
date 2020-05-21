@@ -9,74 +9,77 @@
 .title {
     font-weight: 500;
 }
-
-main {
-    .mobile-nav {
-        width: 236px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -236px;
-        transition: 0.5s all;
-        border-left: 1px solid $light;
-        ul:first-child {
-            margin-top: 73px;
-            li {
-                a {
-                    color: $black;
-                    padding: 14px 30px;
-                    margin: 3px 0;
-                    display: block;
-                    font-family: $title;
-                    font-size: 15px;
-                    transition: 0.3s all;
-                    letter-spacing: 2px;
-                }
-                a:hover {
-                    text-decoration: none !important;
-                    color: $primary;
-                }
+.mobile-nav {
+    width: 236px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -236px;
+    transition: 0.5s all;
+    border-left: 1px solid $light;
+    background: $white;
+    ul:first-child {
+        margin-top: 73px;
+        li {
+            a {
+                color: $black;
+                padding: 14px 30px;
+                margin: 3px 0;
+                display: block;
+                font-family: $title;
+                font-size: 15px;
+                transition: 0.3s all;
+                letter-spacing: 2px;
             }
-            li:nth-child(1) {
-                a {
-                    color: $primary;
-                }
+            a:hover {
+                text-decoration: none !important;
+                color: $primary;
             }
         }
-        ul:nth-child(2) {
-            padding-left: 30px;
-            li {
-                @include social(28px, $secondary);
-                i {
-                    font-size: .875rem;
-                    color: $white;
-                }
-            }
-            li:hover {
-                background: $black;
+        li:nth-child(1) {
+            a {
+                color: $primary;
             }
         }
     }
-    header {
-        .header-wrap {
-            @include container(small);
-            @include flex-x(between);
-        }
-        .logo {
-            width: 67px;
-            padding: 10px 0;
-            img {
-                width: 100%;
+    ul:nth-child(2) {
+        padding-left: 30px;
+        li {
+            @include social(28px, $secondary);
+            i {
+                font-size: .875rem;
+                color: $white;
             }
         }
-        .desktop-nav {
-            display: none;
-            @include media-query(1024px) {
-                display: block;
-            }
+        li:hover {
+            background: $black;
         }
-        .hamburger {
-            @include center(y, relative);
+    }
+}
+header {
+    background: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    .header-wrap {
+        @include container(small);
+        @include flex-x(between);
+    }
+    .logo {
+        width: 67px;
+        padding: 10px 0;
+        img {
+            width: 100%;
         }
+    }
+    .desktop-nav {
+        display: none;
+        @include media-query(1024px) {
+            display: block;
+        }
+    }
+    .hamburger {
+        @include center(y, relative);
     }
 }
