@@ -1,0 +1,20 @@
+@import "../utils/mixins";
+
+@mixin social($size, $color) {
+    display: inline-block;
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    background: $color;
+    position: relative;
+    transition: 0.3s all;
+
+    i {
+        @include center(z, absolute);
+    }
+}
+.social-links {
+    a + a {
+        margin-left: 10px;
+    }
+}
