@@ -1,4 +1,29 @@
+@import "../layout/flex";
+@import "../utils/mixins";
 .home-bg {
     background: url("../../../dist/images/home-bg.png") center center;
     height: 100vh;
+    @include flex-x(center);
+    .ad {
+        height: 300px;
+        flex-direction: column;
+        @include center(y, relative);
+        @include media-query(768px) {
+            flex-direction: row-reverse;
+        }
+        .price {
+            width: 150px;
+            height: 150px;
+            background: $primary;
+            border-radius: 50%;
+            @include center(x, relative);
+        }
+        .showcase-ad {
+            h1 {
+                color: $white;
+                font-family: $title;
+                text-align: center;
+            }
+        }
+    }
 }

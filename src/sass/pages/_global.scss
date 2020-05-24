@@ -43,7 +43,7 @@
         }
     }
     ul:nth-child(2) {
-        padding-left: 30px;
+        margin: 10px 30px;
         li {
             @include social(28px, $secondary);
             i {
