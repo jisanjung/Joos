@@ -10,6 +10,8 @@
         @include center(y, relative);
         @include media-query(768px) {
             flex-direction: row-reverse;
+            @include flex-x(between);
+            width: 100%;
         }
         .price {
             width: 150px;
@@ -17,12 +19,19 @@
             background: $primary;
             border-radius: 50%;
             @include center(x, relative);
+            @include media-query(768px) {
+                left: auto;
+                transform: none;
+            }
         }
         .showcase-ad {
             h1 {
                 color: $white;
                 font-family: $title;
                 text-align: center;
+            }
+            button {
+                width: 100%;
             }
         }
     }

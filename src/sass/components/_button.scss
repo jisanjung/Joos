@@ -1,0 +1,27 @@
+@import "../utils/variables";
+
+%btn {
+    font-family: $title;
+    border: none;
+    letter-spacing: 1px;
+    transition: 0.5s all;
+    color: $white;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: .96875rem;
+    height: 3.45em;
+    padding-left: calc(3.2em - 1px);
+    padding-right: calc(3.2em - 1px);
+    &:hover {
+        cursor: pointer;
+        background: $dark;
+    }
+}
+.btn-primary {
+    @extend %btn;
+    background: $primary;
+}
+.btn-secondary {
+    @extend %btn;
+    background: $secondary;
+}
