@@ -1,11 +1,31 @@
 @import "../layout/flex";
 @import "../utils/mixins";
+
+// animation
+@mixin slide-up($duration, $delay) {
+    position: relative;
+    animation: slide-up $duration $delay forwards;
+    @keyframes slide-up {
+        0% {opacity: 0; top: 80px;}
+        100% {opacity: 1; top: 0px;}
+    }
+}
+@mixin slide-down($duration, $delay) {
+    position: relative;
+    animation: slide-down $duration $delay forwards;
+    @keyframes slide-down {
+        0% {opacity: 0; top: -80px;}
+        100% {opacity: 1; top: 0px;}
+    }
+}
+
 .home-bg {
     background: url("../../../dist/images/home-bg.png") center center;
     height: 100vh;
     @include flex-x(center);
     .ad {
         height: 300px;
+        width: 70%;
         flex-direction: column;
         @include center(y, relative);
         @include media-query(768px) {
@@ -23,15 +43,47 @@
                 left: auto;
                 transform: none;
             }
+            opacity: 0;
+            @include slide-up(1s, 1.75s);
+            div {
+                @include center(z, absolute);
+                h3 {
+                    font-family: $title;
+                    color: $secondary;
+                    text-align: center;
+                }
+                h1 {
+                    font-family: $special;
+                    font-size: 3rem;
+                    color: $white;
+                    span {
+                        font-size: 2rem !important;
+                        position: relative;
+                        bottom: 5px;
+                    }
+                }
+            }
         }
         .showcase-ad {
+            .title {
+                opacity: 0;
+                @include center(x, relative);
+                @include slide-down(1s, 0.5s);
+            }
             h1 {
                 color: $white;
                 font-family: $title;
+                font-size: 2rem;
+                line-height: 1.1;
+                margin-bottom: 20px;
                 text-align: center;
+                opacity: 0;
+                @include slide-up(1s, 1s);
             }
             button {
-                width: 100%;
+                @include center(x, relative);
+                opacity: 0;
+                @include slide-up(1s, 1.25s);
             }
         }
     }

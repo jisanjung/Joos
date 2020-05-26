@@ -3,12 +3,29 @@
 @import "../layout/flex";
 @import "../components/social";
 
+// global
 * {
     @include reset();
 }
 .title {
     font-weight: 500;
+    background: url("../../../dist/images/title.png");
+    width: 200px;
+    height: 90px;
+    position: relative;
+    color: $white;
+    font-family: $title;
+    h2 {
+        text-align: center;
+        @include center(y, relative);
+    }
 }
+.heading {
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+}
+
+// header nav
 .mobile-nav {
     width: 236px;
     position: absolute;
