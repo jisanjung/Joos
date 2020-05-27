@@ -1,4 +1,4 @@
-import { Menu } from "./Menu.js";
+import { Menu } from "./global.js";
 
 // header
 let m = new Menu("hamburger--spin-r");
