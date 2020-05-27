@@ -80,6 +80,10 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 2;
+    @include media-query-mobile(1024px) {
+        background: transparent;
+    }
     .header-wrap {
         @include container(small);
         @include flex-x(between);
@@ -93,11 +97,45 @@ header {
     }
     .menu {
         z-index: 2;
+        @include media-query-mobile(1024px) {
+            display: none;
+        }
     }
     .desktop-nav {
         display: none;
         @include media-query-mobile(1024px) {
+            position: relative;
             display: block;
+            width: 100%;
+            @include flex-x(center);
+            ul:first-child {
+                @include flex-x(center);
+                @include center(y, absolute);
+                li {
+                    padding: 0 15px;
+                    letter-spacing: 2px;
+                    a, a:visited {
+                        color: $light;
+                        font-size: 0.9375rem;
+                    }
+                }
+                font-family: $title;
+            }
+            .social-links {
+                @include center(y, absolute);
+                right: 0;
+                a {
+                    &:visited {
+                        color: $black;
+                    }
+                }
+                li {
+                    @include social(32px, $white);
+                    &:hover {
+                        background: $secondary;
+                    }
+                }
+            }
         }
     }
     .hamburger {

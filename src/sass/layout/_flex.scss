@@ -4,7 +4,7 @@
     @if ($arrange == "start") {
         justify-content: start;
     } @else if ($arrange == "end") {
-        justify-content: end;
+        justify-content: flex-end;
     } @else if ($arrange == "center") {
         justify-content: center;
     } @else if ($arrange == "between") {

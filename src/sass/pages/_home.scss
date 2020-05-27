@@ -29,7 +29,9 @@
 
 .home-bg {
     background: url("../../../dist/images/home-bg.png") center center;
+    background-repeat: no-repeat;
     height: 100vh;
+    background-size: cover;
     @include flex-x(center);
     .ad {
         z-index: 1;
