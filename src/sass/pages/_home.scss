@@ -18,17 +18,26 @@
         100% {opacity: 1; top: 0px;}
     }
 }
+@mixin smoke-animate() {
+    animation: smoke 5s infinite;
+    @keyframes smoke {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0; top: 200px;}
+    }
+}
 
 .home-bg {
     background: url("../../../dist/images/home-bg.png") center center;
     height: 100vh;
     @include flex-x(center);
     .ad {
+        z-index: 1;
         height: 300px;
         width: 70%;
         flex-direction: column;
         @include center(y, relative);
-        @include media-query(768px) {
+        @include media-query-mobile(768px) {
             flex-direction: row-reverse;
             @include flex-x(between);
             width: 100%;
@@ -39,7 +48,7 @@
             background: $primary;
             border-radius: 50%;
             @include center(x, relative);
-            @include media-query(768px) {
+            @include media-query-mobile(768px) {
                 left: auto;
                 transform: none;
             }
@@ -84,6 +93,42 @@
                 @include center(x, relative);
                 opacity: 0;
                 @include slide-up(1s, 1.25s);
+            }
+        }
+    }
+    .smoke-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        @include flex-x(center);
+        @include media-query-desktop(399px) {
+            @include center(x, absolute);
+        }
+        .smoke {
+            @include center(y, absolute);
+            @include smoke-animate();
+            margin-top: 150px;
+            img {
+                position: relative;
+            }
+            img:nth-child(1) {
+                @include media-query-mobile(768px) {
+                    margin-left: 50px;
+                }
+            }
+            img:nth-child(2) {
+                @include media-query-mobile(768px) {
+                    margin-bottom: 150px;
+                }
+            }
+        }
+        .smoke:nth-child(2), .smoke:nth-child(3) {
+            bottom: 150px;
+            @include media-query-mobile(768px) {
+                margin-left: 50px;
+                bottom: 50px;
             }
         }
     }

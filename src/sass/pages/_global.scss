@@ -35,6 +35,7 @@
     transition: 0.5s all;
     border-left: 1px solid $light;
     background: $white;
+    z-index: 2;
     ul:first-child {
         margin-top: 73px;
         li {
@@ -90,9 +91,12 @@ header {
             width: 100%;
         }
     }
+    .menu {
+        z-index: 2;
+    }
     .desktop-nav {
         display: none;
-        @include media-query(1024px) {
+        @include media-query-mobile(1024px) {
             display: block;
         }
     }

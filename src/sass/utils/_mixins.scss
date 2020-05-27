@@ -40,8 +40,13 @@ html, body {
     }
 }
 
-@mixin media-query($breakpoint) {
+@mixin media-query-mobile($breakpoint) {
     @media screen and (min-width: $breakpoint) {
-        @content
+        @content;
+    }
+}
+@mixin media-query-desktop($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content;
     }
 }
