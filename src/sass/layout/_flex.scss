@@ -17,18 +17,19 @@
 }
 @mixin flex-y($arrange) {
     display: flex;
+    flex-direction: column;
 
     @if ($arrange == "start") {
-        align-content: flex-start;
+        align-items: flex-start;
     } @else if ($arrange == "end") {
-        align-content: flex-end;
+        align-items: flex-end;
     } @else if ($arrange == "center") {
-        align-content: center;
+        align-items: center;
     } @else if ($arrange == "between") {
-        align-content: space-between;
+        align-items: space-between;
     } @else if ($arrange == "around") {
-        align-content: space-around;
+        align-items: space-around;
     } @else if ($arrange == "even") {
-        align-content: space-evenly;
+        align-items: space-evenly;
     }
 }

@@ -87,10 +87,19 @@ header {
     .header-wrap {
         @include container(small);
         @include flex-x(between);
+        @include media-query-mobile(768px) {
+            @include container(medium);
+        }
+        @include media-query-mobile(1200px) {
+            @include container(large);
+        }
     }
     .logo {
         width: 67px;
         padding: 10px 0;
+        @include media-query-mobile(1024px) {
+            width: 80px;
+        }
         img {
             width: 100%;
         }

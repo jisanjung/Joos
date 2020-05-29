@@ -27,12 +27,19 @@
     }
 }
 
-.home-bg {
-    background: url("../../../dist/images/home-bg.png") center center;
-    background-repeat: no-repeat;
+.showcase {
     height: 100vh;
-    background-size: cover;
     @include flex-x(center);
+    .home-bg {
+        background: url("../../../dist/images/home-bg.png") center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .ad {
         z-index: 1;
         height: 300px;
@@ -43,6 +50,11 @@
             flex-direction: row-reverse;
             @include flex-x(between);
             width: 100%;
+            @include container(medium);
+        }
+        @include media-query-mobile(1200px) {
+            height: 400px;
+            @include container(large);
         }
         .price {
             width: 150px;
@@ -76,9 +88,13 @@
             }
         }
         .showcase-ad {
+            @include flex-y(center);
+            @include flex-x(between);
+            @include media-query-mobile(768px) {
+                @include flex-y(start);
+            }
             .title {
                 opacity: 0;
-                @include center(x, relative);
                 @include slide-down(1s, 0.5s);
             }
             h1 {
@@ -86,13 +102,21 @@
                 font-family: $title;
                 font-size: 2rem;
                 line-height: 1.1;
-                margin-bottom: 20px;
+                padding-bottom: 20px;
                 text-align: center;
                 opacity: 0;
+                letter-spacing: 1px;
                 @include slide-up(1s, 1s);
+                @include media-query-mobile(768px) {
+                    text-align: left;   
+                    font-size: 3rem;
+                    padding: 20px 0px 40px 0px;
+                }
+                @include media-query-mobile(1200px) {
+                    font-size: 5rem;
+                }
             }
             button {
-                @include center(x, relative);
                 opacity: 0;
                 @include slide-up(1s, 1.25s);
             }
