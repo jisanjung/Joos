@@ -159,3 +159,20 @@
         }
     }
 }
+main {
+    background-color: $white;
+    position: relative;
+    z-index: 2;
+    .about {
+        overflow: hidden;
+        .section-wrap {
+            position: relative;
+            z-index: 3;
+            .burger {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

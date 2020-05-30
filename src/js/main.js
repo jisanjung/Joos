@@ -4,4 +4,5 @@ import { Menu } from "./global.js";
 let m = new Menu("hamburger--spin-r");
 m.toggleMenu();
 
+// parallax
 let rellax = new Rellax(".rellax");
