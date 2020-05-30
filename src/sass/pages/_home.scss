@@ -169,8 +169,36 @@ main {
             position: relative;
             z-index: 3;
             .burger {
+                margin: 0 auto;
                 img {
                     width: 100%;
+                    @include media-query-mobile(768px) {
+                        width: 530px;
+                    }
+                    @include media-query-mobile(1024px) {
+                        width: 456px;
+                    }
+                }
+            }
+            .description {
+                @include media-query-mobile(1200px) {
+                    position: relative;
+                    top: 70px;
+                }
+                ul {
+                    font-size: 0.9rem;
+                    font-family: $text;
+                    line-height: 1.85;
+                    color: #797979;
+                    margin: 0.5rem 5% 1.5rem 5%;
+                    li {
+                        list-style: disc;
+                        padding: 4px 0;
+                        letter-spacing: .5px;
+                    }
+                }
+                button {
+                    width: 170px;
                 }
             }
         }

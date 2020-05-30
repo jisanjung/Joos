@@ -17,9 +17,11 @@ html, body {
     @if ($size == "large") {
         max-width: 1000px;
     } @else if ($size == "medium") {
-        max-width: 70%;
+        max-width: 80%;
     } @else if ($size == "small") {
         max-width: 90%;
+    } @else if ($size == "x-large") {
+        max-width: 1200px;
     }
 }
 
