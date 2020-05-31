@@ -6,3 +6,6 @@ m.toggleMenu();
 
 // parallax
 let rellax = new Rellax(".rellax");
+
+// animate on scroll
+AOS.init();
