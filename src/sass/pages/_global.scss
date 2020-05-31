@@ -3,6 +3,18 @@
 @import "../layout/flex";
 @import "../components/social";
 
+// mixins
+@mixin active-link {
+    &::before {
+        content: "";
+        background: $secondary;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -10px;
+    }
+}
+
 // global
 * {
     @include reset();
@@ -65,6 +77,9 @@
 }
 .section {
     padding: 3rem 0 1rem 0;
+}
+.active {
+    @include active-link();
 }
 
 // header nav
@@ -162,23 +177,25 @@ header {
             ul:first-child {
                 @include flex-x(center);
                 @include center(y, absolute);
+                font-family: $title;
                 li {
                     padding: 0 15px;
                     letter-spacing: 2px;
                     a, a:visited {
                         color: $light;
                         font-size: 0.9375rem;
+                        position: relative;
+                        &:hover {
+                            @include active-link();
+                        }
                     }
                 }
-                font-family: $title;
             }
             .social-links {
                 @include center(y, absolute);
                 right: 0;
-                a {
-                    &:visited {
-                        color: $black;
-                    }
+                a, a:visited {
+                    color: $black;
                 }
                 li {
                     @include social(32px, $white);
