@@ -165,14 +165,20 @@ main {
     z-index: 2;
     .about {
         overflow: hidden;
-        .side-info {
-            
-        }
         .section-wrap {
             position: relative;
             z-index: 3;
             .burger {
                 margin: 0 auto;
+                position: relative;
+                .side-info {
+                    width: 75px;
+                    left: -70px;
+                    @include center(y, absolute);
+                    img {
+                        width: 100%;
+                    }
+                }
                 img {
                     width: 100%;
                     @include media-query-mobile(768px) {
