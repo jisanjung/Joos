@@ -165,6 +165,7 @@ main {
     z-index: 2;
     .about {
         overflow: hidden;
+        padding: 3rem 0 0 0 !important;
         .section-wrap {
             position: relative;
             z-index: 3;
@@ -197,6 +198,9 @@ main {
                 @include media-query-mobile(1200px) {
                     position: relative;
                     top: 70px;
+                }
+                p {
+                    font-size: 17px;
                 }
                 ul {
                     font-size: 0.9rem;
@@ -243,6 +247,55 @@ main {
                 height: 100%;
                 object-fit: cover;
             }
+        }
+    }
+    .menu {
+        .description {  
+            .title {
+                @include center(x, relative);
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        .section-wrap {
+            @include media-query-mobile(1024px) {
+                .menu-item + .menu-item {
+                    padding-left: 20px;
+                }
+            }
+            .menu-item {
+                width: 100%;
+                text-align: center;
+                img {
+                    width: 365px;
+                    @include media-query-mobile(1024px) {
+                        width: 100%;
+                    }
+                }
+                h3 {
+                    font-family: $title;
+                    color: $dark;
+                    letter-spacing: 0.5px;
+                    span {
+                        color: $primary;
+                        padding: 0 10px;
+                    }
+                }
+                p {
+                    color: $semi;
+                    font-family: $text;
+                    font-size: 15px;
+                    padding: 20px 0;
+                }
+            }
+        }
+        .container {
+            @include flex-x(center);
+            padding: 1rem 0 5rem 0;
         }
     }
 }

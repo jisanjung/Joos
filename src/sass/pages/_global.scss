@@ -40,6 +40,8 @@
     @include flex-x(center);
     flex-direction: column;
     padding-top: 30px;
+}
+.container {
     @include container(small);
     @include media-query-mobile(768px) {
         @include container(medium);
@@ -69,14 +71,13 @@
         padding-bottom: 30px;
     }
     p {
-        font-size: 17px;
         font-family: $text;
         line-height: 1.85;
         color: #797979;
     }
 }
 .section {
-    padding: 3rem 0 1rem 0;
+    padding: 5rem 0 2rem 0;
 }
 .active {
     @include active-link();
@@ -93,6 +94,9 @@
     border-left: 1px solid $light;
     background: $white;
     z-index: 2;
+    @include media-query-mobile(1024px) {
+        display: none;
+    }
     ul:first-child {
         margin-top: 73px;
         li {
