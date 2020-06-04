@@ -271,9 +271,16 @@ main {
                 width: 100%;
                 text-align: center;
                 img {
-                    width: 365px;
+                    width: 320px;
                     @include media-query-mobile(1024px) {
                         width: 100%;
+                    }
+                    @include media-query-desktop(365px) {
+                        width: 250px;
+                    }
+                    transition: 0.5s all;
+                    &:hover {
+                        transform: scale(1.1);
                     }
                 }
                 h3 {
