@@ -40,15 +40,18 @@
     @include flex-x(center);
     flex-direction: column;
     padding-top: 30px;
+    @include media-query-mobile(1024px) {
+        flex-direction: row;
+    }
 }
 .container {
     @include container(small);
     @include media-query-mobile(768px) {
         @include container(medium);
     }
-    @include media-query-mobile(1024px) {
-        flex-direction: row;
-    }
+    // @include media-query-mobile(1024px) {
+    //     flex-direction: row;
+    // }
     @include media-query-mobile(1200px) {
         @include container(large);
     }

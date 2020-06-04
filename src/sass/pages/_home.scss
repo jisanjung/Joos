@@ -302,7 +302,26 @@ main {
         }
         .container {
             @include flex-x(center);
-            padding: 1rem 0 5rem 0;
+            button {
+                margin-top: 5rem;
+            }
+        }
+    }
+    .testimonials {
+        position: relative;
+        .paint-stroke {
+            top: -10px;
+        }
+        .quote {
+            height: 560px;
+            img {
+                height: 100%;
+            }
+        }
+        .testimonial-img {
+            img {
+                width: 370px;
+            }
         }
     }
 }
