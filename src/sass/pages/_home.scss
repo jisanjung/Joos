@@ -314,6 +314,7 @@ main {
             top: -10px;
         }
         .quote {
+            height: 560px;
             background: url("../../../dist/images/black.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -386,6 +387,7 @@ main {
             @include media-query-mobile(1024px) {
                 width: 50%;
                 margin-top: 0;
+                height: 560px;
             }
             img {
                 width: 100%;
