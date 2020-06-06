@@ -401,11 +401,48 @@ main {
     }
     .instagram {
         .description {
+            padding-bottom: 4rem;
             .title {
                 @include center(x, relative);
             }
             h1, p {
                 text-align: center;
+            }
+        }
+        .section-row {
+            .section-wrap {
+                a + a {
+                    padding-top: 1.5rem;
+                    @include media-query-mobile(1024px) {
+                        padding: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    margin: 0 15px !important;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transition: 0.25s all;
+                    }
+                    .tint {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        transition: 0.5s all;
+                    }
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                        .tint {
+                            background: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
             }
         }
     }
