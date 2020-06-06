@@ -399,4 +399,14 @@ main {
             }
         }
     }
+    .instagram {
+        .description {
+            .title {
+                @include center(x, relative);
+            }
+            h1, p {
+                text-align: center;
+            }
+        }
+    }
 }
