@@ -435,11 +435,13 @@ main {
                         transition: 0.5s all;
                     }
                     &:hover {
-                        img {
-                            transform: scale(1.1);
-                        }
-                        .tint {
-                            background: rgba(0, 0, 0, 0.5);
+                        @include media-query-mobile(1024px) {
+                            img {
+                                transform: scale(1.1);
+                            }
+                            .tint {
+                                background: rgba(0, 0, 0, 0.5);
+                            }
                         }
                     }
                 }

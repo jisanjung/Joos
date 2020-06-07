@@ -217,3 +217,38 @@ header {
         @include center(y, relative);
     }
 }
+footer {
+    .newsletter {
+        background: $primary;
+        padding: 8rem 0 7rem 0;
+        position: relative;
+        .paint-stroke {
+            top: -100px;
+        }
+        .section-wrap {
+            padding-top: 0;
+        }
+        .heading {
+            color: $white;
+            h1 {
+                font-family: $title;
+                font-size: 38px;
+                text-align: center;
+                line-height: 1.2;
+            }
+            p {
+                text-align: center;
+                font-family: $text;
+                font-weight: lighter;
+                line-height: 1.85;
+                font-size: 14.5px;
+                padding: 1rem 0;
+            }
+        }
+        form {
+            button {
+                margin-top: 20px;   
+            }
+        }
+    }
+}
