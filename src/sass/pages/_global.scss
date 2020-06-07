@@ -230,14 +230,17 @@ footer {
         }
         .heading {
             color: $white;
+            text-align: center;
+            @include media-query-mobile(1024px) {
+                text-align: left;
+                width: 50%;
+            }
             h1 {
                 font-family: $title;
                 font-size: 38px;
-                text-align: center;
                 line-height: 1.2;
             }
             p {
-                text-align: center;
                 font-family: $text;
                 font-weight: lighter;
                 line-height: 1.85;
@@ -246,8 +249,18 @@ footer {
             }
         }
         form {
+            @include media-query-mobile(1024px) {
+                width: 50%;
+                .section-wrap {
+                    @include center(y, relative);
+                }
+            }
             button {
-                margin-top: 20px;   
+                margin-top: 20px;
+                @include media-query-mobile(1024px) {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
             }
         }
     }
