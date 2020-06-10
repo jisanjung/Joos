@@ -218,6 +218,7 @@ header {
     }
 }
 footer {
+    padding-bottom: 0 !important;
     .newsletter {
         background: $primary;
         padding: 8rem 0 7rem 0;
@@ -266,5 +267,83 @@ footer {
     }
     #mapid {
         height: 600px;
+    }
+    .info {
+        background: $dark;
+        color: $white;
+        font-family: $text;
+        letter-spacing: 1px;
+        p, li {
+            font-size: 0.9375rem;
+        }
+        .section-wrap {
+            padding: 7.5rem 0;
+            .footer-item {
+                padding: 2rem 0;
+                @include media-query-mobile(1024px) {
+                    width: 248px;
+                    justify-content: space-between !important;
+                }
+                h2 {
+                    font-family: $title;
+                    padding-bottom: 1rem;
+                    font-size: 19px;
+                    @include media-query-mobile(1024px) {
+                        padding-top: 20px;
+                    }
+                }
+                ul {
+                    li {
+                        padding: 0.5rem 0;
+                        color: $light;
+                    }
+                }
+            }
+            .logo {
+                img {
+                    width: 60px;
+                    padding-bottom: 15px;
+                }
+                p {
+                    line-height: 1.85;
+                    color: $light;
+                }
+            }
+        }
+        .contact-info {
+            padding-bottom: 2.6rem;
+            .section-wrap {
+                text-align: center;
+                color: $light;
+                align-items: center;
+                padding: 0;
+                justify-content: space-between !important;
+                p {
+                    span {
+                        color: $white;
+                    }
+                }
+                ul {
+                    @include flex-x(center);
+                }
+                .social-links {
+                    padding: 1.5rem 0;
+                    a, a:visited {
+                        color: $black;
+                    }
+                    li {
+                        @include social(32px, $white);
+                        &:hover {
+                            background: $secondary;
+                        }
+                    }
+                }
+                .footer-nav {
+                    li + li {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }
