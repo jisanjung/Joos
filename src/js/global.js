@@ -38,13 +38,30 @@ export class Header {
 
         window.addEventListener("scroll", () => {
             let currPosition = window.pageYOffset;
+
+            if (mediaQuery(1024)) {
+                if (currPosition == "0") {
+                    header.style.background = "transparent";
+                    header.classList.remove("header-active");
+                }
+            }
             
             if (prevPosition > currPosition) {
                 header.style.top = "0";
             } else {
                 header.style.top = `-${header.offsetHeight}px`;
+                header.style.background = "#fff";
+                header.classList.add("header-active");
             }
             prevPosition = currPosition;
         });
+    }
+}
+
+function mediaQuery(size) {
+    if (window.matchMedia(`(min-width: ${size}px)`).matches) {
+        return true;
+    } else {
+        return false;
     }
 }

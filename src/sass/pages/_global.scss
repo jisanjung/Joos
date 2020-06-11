@@ -219,6 +219,25 @@ header {
         @include center(y, relative);
     }
 }
+.header-active {
+    .desktop-nav {
+        a {
+            color: $dark !important;
+            font-weight: bold !important;
+        }
+        .social-links {
+            li {
+                background: $secondary;
+                &:hover {
+                    background: $dark;
+                }
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
 footer {
     padding-bottom: 0 !important;
     .newsletter {
