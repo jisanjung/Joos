@@ -89,14 +89,14 @@
 // header nav
 .mobile-nav {
     width: 236px;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: -236px;
     transition: 0.5s all;
     border-left: 1px solid $light;
     background: $white;
-    z-index: 2;
+    z-index: 3;
     @include media-query-mobile(1024px) {
         display: none;
     }
@@ -140,11 +140,12 @@
 }
 header {
     background: $white;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
+    transition: 0.5s all;
     @include media-query-mobile(1024px) {
         background: transparent;
     }
@@ -169,7 +170,8 @@ header {
         }
     }
     .menu {
-        z-index: 2;
+        position: relative;
+        z-index: 5;
         @include media-query-mobile(1024px) {
             display: none;
         }

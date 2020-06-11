@@ -30,3 +30,21 @@ export class Menu {
         });
     }
 }
+
+export class Header {
+    scrolled() {
+        let prevPosition = window.pageYOffset;
+        let header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            let currPosition = window.pageYOffset;
+            
+            if (prevPosition > currPosition) {
+                header.style.top = "0";
+            } else {
+                header.style.top = `-${header.offsetHeight}px`;
+            }
+            prevPosition = currPosition;
+        });
+    }
+}

@@ -1,8 +1,11 @@
 import { Menu } from "./global.js";
+import { Header } from "./global.js";
 
 // header
 let m = new Menu("hamburger--spin-r");
 m.toggleMenu();
+let h = new Header();
+h.scrolled();
 
 // parallax
 let rellax = new Rellax(".rellax");
