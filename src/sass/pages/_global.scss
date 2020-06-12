@@ -85,6 +85,19 @@
 .active {
     @include active-link();
 }
+.back-to-top {
+    position: fixed;
+    z-index: 5;
+    right: -38px;
+    top: 90%;
+    width: 38px;
+    height: 38px;
+    background: $primary;
+    color: $white;
+    &:hover {
+        background: $dark;
+    }
+}
 
 // header nav
 .mobile-nav {
@@ -224,6 +237,9 @@ header {
         a {
             color: $dark !important;
             font-weight: bold !important;
+            &:hover {
+                color: $primary !important;
+            }
         }
         .social-links {
             li {

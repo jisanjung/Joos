@@ -58,6 +58,21 @@ export class Header {
     }
 }
 
+export class BackToTop {
+    scrolled() {
+        window.addEventListener("scroll", () => {
+            let currPosition = window.pageYOffset;
+            const button = document.querySelector(".back-to-top");
+
+            if (currPosition > 1000) {
+                button.style.right = "30px";
+            } else {
+                button.style.right = "-38px";
+            }
+        });
+    }
+}
+
 function mediaQuery(size) {
     if (window.matchMedia(`(min-width: ${size}px)`).matches) {
         return true;
