@@ -1,5 +1,4 @@
-import { Menu, BackToTop } from "./global.js";
-import { Header } from "./global.js";
+import { Menu, Header, BackToTop, smoothScroll } from "./global.js";
 
 // header
 let m = new Menu("hamburger--spin-r");
@@ -8,6 +7,7 @@ let h = new Header();
 h.scrolled();
 let b = new BackToTop();
 b.scrolled();
+smoothScroll();
 
 // parallax
 let rellax = new Rellax(".rellax");

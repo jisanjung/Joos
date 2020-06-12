@@ -94,8 +94,18 @@
     height: 38px;
     background: $primary;
     color: $white;
+    transition: 0.5s all;
+    border-radius: 50%;
+    -webkit-box-shadow: 2px 2px 3px rgba(146,146,146,.3);
+    box-shadow: 2px 2px 3px rgba(146,146,146,.3);
     &:hover {
         background: $dark;
+    }
+    i {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
