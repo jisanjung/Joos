@@ -49,9 +49,6 @@
     @include media-query-mobile(768px) {
         @include container(medium);
     }
-    // @include media-query-mobile(1024px) {
-    //     flex-direction: row;
-    // }
     @include media-query-mobile(1200px) {
         @include container(large);
     }
@@ -107,6 +104,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+.tint {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 // header nav
@@ -314,6 +318,12 @@ footer {
     }
     #mapid {
         height: 600px;
+        z-index: 1;
+        position: relative;
+        .tint {
+            background: rgba($color: #000000, $alpha: 0.5);
+            z-index: 1000;
+        }
     }
     .info {
         background: $dark;

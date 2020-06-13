@@ -31,46 +31,38 @@ export class Menu {
     }
 }
 
-export class Header {
-    scrolled() {
-        let prevPosition = window.pageYOffset;
-        let header = document.querySelector("header");
+export function toggleHeader() {
+    let prevPosition = window.pageYOffset;
+    let header = document.querySelector("header");
 
-        window.addEventListener("scroll", () => {
-            let currPosition = window.pageYOffset;
+    window.addEventListener("scroll", () => {
+        let currPosition = window.pageYOffset;
 
-            if (mediaQuery(1024)) {
-                if (currPosition == "0") {
-                    header.style.background = "transparent";
-                    header.classList.remove("header-active");
-                }
+        if (mediaQuery(1024)) {
+            if (currPosition == "0") {
+                header.style.background = "transparent";
+                header.classList.remove("header-active");
             }
-            
-            if (prevPosition > currPosition) {
-                header.style.top = "0";
-            } else {
-                header.style.top = `-${header.offsetHeight}px`;
-                header.style.background = "#fff";
-                header.classList.add("header-active");
-            }
-            prevPosition = currPosition;
-        });
-    }
+        }
+        
+        if (prevPosition > currPosition) {
+            header.style.top = "0";
+        } else {
+            header.style.top = `-${header.offsetHeight}px`;
+            header.style.background = "#fff";
+            header.classList.add("header-active");
+        }
+        prevPosition = currPosition;
+    });
 }
 
-export class BackToTop {
-    scrolled() {
-        window.addEventListener("scroll", () => {
-            let currPosition = window.pageYOffset;
-            const button = document.querySelector(".back-to-top");
+export function backToTop() {
+    window.addEventListener("scroll", () => {
+        let currPosition = window.pageYOffset;
+        const button = document.querySelector(".back-to-top");
 
-            if (currPosition > 1000) {
-                button.style.right = "30px";
-            } else {
-                button.style.right = "-38px";
-            }
-        });
-    }
+        currPosition > 1000 ? button.style.right = "30px" : button.style.right = "-38px";
+    });
 }
 
 function mediaQuery(size) {
@@ -80,6 +72,7 @@ function mediaQuery(size) {
         return false;
     }
 }
+
 export function smoothScroll() {   
     // smooth scroll
     $('a[href*=\\#]').on('click', function(event){     
