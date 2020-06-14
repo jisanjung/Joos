@@ -53,28 +53,53 @@
     </header>
     
     <!--showcase-->
-    <section class="showcase-2">
+    <section class="showcase-2" id="smoothScroll">
         <div class="text">
             <h1>ABOUT US</h1>
             <h3>Info about our delicious grill</h3>
         </div>
     </section>
 
-    <main class="about-main section">
-        <div class="paint-stroke"><img src="./dist/images/paint-stroke-white.png" alt="White Paint Stroke"></div>
-        <div class="section-wrap container">
-            <div class="description">
-                <div class="title">
-                    <h2>About Us</h2>
+    <!--main-->
+    <main class="about-main">
+        <!--info-->
+        <section class="about-info section">
+            <div class="paint-stroke"><img src="./dist/images/paint-stroke-white.png" alt="White Paint Stroke"></div>
+            <div class="section-wrap container">
+                <div class="description">
+                    <div class="title">
+                        <h2>About Us</h2>
+                    </div>
+                    <h1>GREAT TASTY FOOD</h1>
+                    <p>From a small food truck located in the depth of New York City to opening a couple of locations in the US, we've grown a lot from when we first started. Each store consistantly replicates our iconic original recipe to the smallest detail. Our duty is to provide not only great service, but quality meals.</p>
+                    <button type="button" class="btn-primary">OUR MENU</button>
                 </div>
-                <h1>GREAT TASTY FOOD</h1>
-                <p>From a small food truck located in the depth of New York City to opening a couple of locations in the US, we've grown a lot from when we first started. Each store consistantly replicates our iconic original recipe to the smallest detail. Our duty is to provide not only great service, but quality meals.</p>
-                <button type="button" class="btn-primary">OUR MENU</button>
+                <div class="about-img">
+                    <img src="./dist/images/about-info.png">
+                </div>
             </div>
-            <div class="about-img">
-                <img src="./dist/images/about-info.png">
+        </section>
+        <!--services-->
+        <section class="services section">
+            <div class="paint-stroke"><img src="./dist/images/paint-stroke-white.png" alt="White Paint Stroke"></div>
+            <div class="section-wrap">
+                <div class="service-item">
+                    <span><i class="fas fa-hamburger"></i></span>
+                    <h1>QUALITY PRODUCTS</h1>
+                    <p>We always strive for the best quality products.</p>
+                </div>
+                <div class="service-item">
+                    <span><i class="fas fa-bell"></i></span>
+                    <h1>FAST SERVICE</h1>
+                    <p>Our well trained employees is what makes our service so great.</p>
+                </div>
+                <div class="service-item">
+                    <span><i class="fas fa-wallet"></i></i></span>
+                    <h1>LOW PRICES</h1>
+                    <p>You won't be able to beat our prices for the same quality.</p>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!--footer-->
@@ -148,7 +173,7 @@
     </footer>
 
     <!--Takes you to top of page-->
-    <a href="#headerID" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <a href="#smoothScroll" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
