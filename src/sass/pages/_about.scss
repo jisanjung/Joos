@@ -95,6 +95,16 @@
                 padding-bottom: 40px;
                 @include media-query-mobile(1024px) {
                     width: 250px;
+                    &:hover {
+                        span {
+                            i {
+                                color: $white;
+                            }
+                        }
+                        h1 {
+                            color: $secondary;
+                        }
+                    }
                 }
                 span {
                     display: block;
@@ -102,6 +112,7 @@
                     i {
                         color: $secondary;
                         font-size: 3.75rem;
+                        transition: 0.3s all;
                     }
                 }
                 text-align: center;
@@ -111,11 +122,80 @@
                     margin-bottom: 10px;
                     font-size: 21px !important;
                     letter-spacing: 1px;
+                    transition: 0.3s all;
                 }
                 p {
                     color: $semi;
                     font-family: $text;
                     font-size: 14px;
+                }
+            }
+        }
+    }
+    .product {
+        .description {
+            text-align: center;
+            .title {
+                @include center(x, relative);
+            }
+        }
+        .section-wrap {
+            padding-top: 50px;
+            .list {
+                position: relative;
+                z-index: 3px;
+                @include media-query-mobile(1200px) {
+                    top: 70px;
+                }
+                ul {
+                    li {
+                        @include media-query-mobile(1024px) {
+                            &:hover {
+                                h3 {
+                                    color: $secondary;
+                                }
+                            }
+                        }
+                        padding-top: 50px;
+                        h3 {
+                            font-family: $title;
+                            color: $dark;
+                            font-size: 21px;
+                            letter-spacing: 1px;
+                            padding-bottom: 10px;
+                            transition: 0.3s all;
+                        }   
+                        p {
+                            font-family: $text;
+                            font-size: 14px;
+                            color: $semi;
+                            line-height: 1.85;
+                        }
+                    }
+                }
+            }
+            .list-left {
+                text-align: right;
+                @include media-query-mobile(1024px) {
+                    padding-right: 10px;
+                }
+            }
+            .list-right {
+                @include media-query-mobile(1024px) {
+                    padding-left: 45px;
+                }
+            }
+            .burger {
+                width: 80%;
+                margin: 0 auto;
+                @include media-query-mobile(768px) {
+                    width: 464px;
+                }
+                @include media-query-mobile(1200px) {
+                    width: 564px;
+                }
+                img {
+                    width: 100%;
                 }
             }
         }

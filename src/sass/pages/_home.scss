@@ -172,6 +172,9 @@ main {
             .burger {
                 margin: 0 auto;
                 position: relative;
+                @include media-query-mobile(1024px) {
+                    left: auto;
+                }
                 .side-info {
                     display: none;
                     width: 75px;
