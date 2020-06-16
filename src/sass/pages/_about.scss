@@ -35,6 +35,7 @@
 .about-main {
     position: relative;
     .about-info {
+        margin-bottom: 30px;
         .paint-stroke {
             top: -25px;
             z-index: 1;
@@ -86,8 +87,18 @@
         .section-wrap {
             position: relative;
             z-index: 3;
+            padding: 60px 0;
+            @include media-query-mobile(1024px) {
+                justify-content: space-evenly;
+            }
             .service-item {
+                padding-bottom: 40px;
+                @include media-query-mobile(1024px) {
+                    width: 250px;
+                }
                 span {
+                    display: block;
+                    margin-bottom: 40px;
                     i {
                         color: $secondary;
                         font-size: 3.75rem;
@@ -97,10 +108,14 @@
                 h1 {
                     color: $white;
                     font-family: $title;
+                    margin-bottom: 10px;
+                    font-size: 21px !important;
+                    letter-spacing: 1px;
                 }
                 p {
                     color: $semi;
                     font-family: $text;
+                    font-size: 14px;
                 }
             }
         }
