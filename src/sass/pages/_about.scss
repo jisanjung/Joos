@@ -1,7 +1,12 @@
+.about-showcase {
+    background: url("../../../dist/images/about.png");
+}
 .showcase-2 {
     height: auto;
-    background: url("../../../dist/images/about.png") no-repeat top center;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    position: relative;
     .text {
         padding: 7rem 0 5rem 0;
         font-family: $title;
@@ -31,15 +36,18 @@
             font-size: 1rem;
         }
     }
+    .paint-stroke {
+        z-index: 1;
+        top: 87%;
+        img {
+            transform: scaleY(-1);
+        }
+    }
 }
 .about-main {
     position: relative;
     .about-info {
         margin-bottom: 30px;
-        .paint-stroke {
-            top: -25px;
-            z-index: 1;
-        }
         .section-wrap {
             position: relative;
             z-index: 2;

@@ -1,0 +1,56 @@
+.menu-showcase {
+    background: url("../../../dist/images/menu.png");
+}
+.menu-main {
+    .entrees {
+        .description {
+            .title {
+                @include center(x, relative);
+            }
+            h1, p {
+                text-align: center;
+            }
+        }
+        .section-wrap {
+            .menu-item {
+                display: flex;
+                .menu-img {
+                    width: 30%;
+                    @include media-query-mobile(500px) {
+                        width: 135px;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .menu-description {
+                    width: 70%;
+                    .section-wrap {
+                        justify-content: flex-start;
+                        padding-top: 0;
+                        h3 {
+                            font-family: $title;
+                            letter-spacing: 1px;
+                        }
+                        .name {
+                            font-size: 22px;
+                            color: $dark;
+                        }
+                        span {
+
+                        }
+                        .price {
+                            font-size: 20px;
+                            color: $primary;
+                        }
+                    }
+                    p {
+                        font-family: $text;
+                        color: $semi;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
