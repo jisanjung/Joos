@@ -12,8 +12,15 @@
             }
         }
         .section-wrap {
+            flex-direction: column;
+            @include media-query-mobile(1200px) {
+                flex-direction: row;
+            } 
             .menu-item {
                 display: flex;
+                @include media-query-mobile(1200px) {
+                    width: 50%;
+                }
                 .menu-img {
                     width: 30%;
                     @include media-query-mobile(500px) {
@@ -28,6 +35,10 @@
                     .section-wrap {
                         justify-content: flex-start;
                         padding-top: 0;
+                        position: relative;
+                        @include media-query-mobile(1024px) {
+                            flex-direction: row !important;
+                        }
                         h3 {
                             font-family: $title;
                             letter-spacing: 1px;
@@ -35,9 +46,24 @@
                         .name {
                             font-size: 22px;
                             color: $dark;
+                            margin-bottom: 0.25rem;
                         }
                         span {
-
+                            height: 1px;
+                            border-bottom: 1px dashed $semi;
+                            width: 100%;
+                            margin-bottom: 1rem;
+                            @include media-query-mobile(1024px) {
+                                position: relative;
+                                top: 15px;
+                                margin: 0 30px; 
+                            }
+                            @include media-query-mobile(1200px) {
+                                position: relative;
+                                top: 15px;
+                                margin: 0 30px; 
+                                width: 180px;
+                            }
                         }
                         .price {
                             font-size: 20px;
@@ -48,6 +74,7 @@
                         font-family: $text;
                         color: $semi;
                         font-size: 14px;
+                        line-height: 1.8;
                     }
                 }
             }
