@@ -1,8 +1,57 @@
+// global
+.menu-description {
+    width: 70%;
+    .section-wrap {
+        justify-content: flex-start;
+        padding-top: 0;
+        position: relative;
+        @include media-query-mobile(1024px) {
+            flex-direction: row !important;
+        }
+        h3 {
+            font-family: $title;
+            letter-spacing: 1px;
+        }
+        .name {
+            font-size: 22px;
+            color: $dark;
+            margin-bottom: 0.25rem;
+        }
+        span {
+            height: 1px;
+            border-bottom: 1px dashed $semi;
+            width: 100%;
+            margin-bottom: 1rem;
+            @include media-query-mobile(1024px) {
+                position: relative;
+                top: 15px;
+                margin: 0 30px; 
+            }
+            @include media-query-mobile(1200px) {
+                position: relative;
+                top: 15px;
+                margin: 0 30px; 
+                width: 180px;
+            }
+        }
+        .price {
+            font-size: 20px;
+            color: $primary;
+        }
+    }
+    p {
+        font-family: $text;
+        color: $semi;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
 .menu-showcase {
     background: url("../../../dist/images/menu.png");
 }
 .menu-main {
     .entrees {
+        padding-bottom: 6rem;
         .description {
             .title {
                 @include center(x, relative);
@@ -32,58 +81,56 @@
                             width: 100%;
                         }
                     }
-                    .menu-description {
-                        width: 70%;
-                        .section-wrap {
-                            justify-content: flex-start;
-                            padding-top: 0;
-                            position: relative;
-                            @include media-query-mobile(1024px) {
-                                flex-direction: row !important;
-                            }
-                            h3 {
-                                font-family: $title;
-                                letter-spacing: 1px;
-                            }
-                            .name {
-                                font-size: 22px;
-                                color: $dark;
-                                margin-bottom: 0.25rem;
-                            }
-                            span {
-                                height: 1px;
-                                border-bottom: 1px dashed $semi;
-                                width: 100%;
-                                margin-bottom: 1rem;
-                                @include media-query-mobile(1024px) {
-                                    position: relative;
-                                    top: 15px;
-                                    margin: 0 30px; 
-                                }
-                                @include media-query-mobile(1200px) {
-                                    position: relative;
-                                    top: 15px;
-                                    margin: 0 30px; 
-                                    width: 180px;
-                                }
-                            }
-                            .price {
-                                font-size: 20px;
-                                color: $primary;
-                            }
-                        }
-                        p {
-                            font-family: $text;
-                            color: $semi;
-                            font-size: 14px;
-                            line-height: 1.8;
-                        }
-                    }
                 }
             } 
         }
+        .paint-stroke {
+            bottom: 0;
+        }
     }
     .section-break {
-        background: url("../../../dist/images/black-2.png");
+        background: url("../../../dist/images/black-2.png") no-repeat center top;
+        padding-bottom: 5rem;
+        position: relative;
+        .description {
+            .title {
+                @include center(x, relative)
+            }
+            h1, p {
+                text-align: center;
+                color: $white;
+            }
+            h1 {
+                padding-bottom: 20px;
+            }
+        }
+        .paint-stroke {
+            top: -100px;
+        }
+    }
+    .combos {
+        .menu-description {
+            width: 100%;
+            padding-top: 3rem;
+        }
+        .combos-top, .combos-bottom {
+            margin-top: 2rem;
+            .combo-img {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @include media-query-mobile(1024px) {
+                    height: 350px;
+                }
+            }
+            .combo-list, .combo-img {
+                @include media-query-mobile(1024px) {
+                    width: 50%;
+                }
+            }
+        }
     }
 }
