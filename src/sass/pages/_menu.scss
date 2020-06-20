@@ -64,6 +64,12 @@
             flex-direction: column;
             @include media-query-mobile(1200px) {
                 flex-direction: row;
+                .entree-left {
+                    padding-right: 20px;
+                }
+                .entree-right {
+                    padding-left: 20px;
+                }
             }
             .entree-left, .entree-right {
                 @include media-query-mobile(1200px) {
@@ -76,6 +82,7 @@
                         width: 30%;
                         @include media-query-mobile(500px) {
                             width: 135px;
+                            height: 90px;
                         }
                         img {
                             width: 100%;
