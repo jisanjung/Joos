@@ -1,3 +1,68 @@
 .contact-showcase {
     background: url("../../../dist/images/contact.png");
 }
+.contact-main {
+    .section-wrap {
+        padding-top: 4rem;
+        form {
+            .input {
+                width: 100%;
+                border: 2px solid #eaeaea;
+                height: 3.06em;
+                margin: 14px 0;
+                padding-left: 1rem;
+            }
+            textarea {
+                height: 245px !important;
+                margin-bottom: 1.5rem !important;
+            }
+        }
+        @include media-query-mobile(1024px) {
+            form {
+                width: 70%;
+                padding-right: 2rem;
+            }
+            .contact-us {
+                width: 30%;
+                padding-left: 2rem;
+            }
+        }
+        .contact-us {
+            @include media-query-desktop(1023px) {
+                padding-top: 2rem;
+            }
+            .description {
+                padding-bottom: 1rem;
+            }
+            .contact-info {
+                font-family: $title;
+                li {
+                    margin: 0.5rem 0;
+                    span {
+                        margin-right: 1rem;
+                        i {
+                            color: $secondary;
+                        }
+                    }
+                    a {
+                        color: $dark;
+                        letter-spacing: 1px;
+                        font-size: 18px;
+                        transition: 0.25s all;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+                .social-links {
+                    li {
+                        @include social(30px, $dark);
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
