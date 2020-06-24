@@ -191,10 +191,10 @@ header {
         }
     }
     .logo {
-        width: 67px;
+        width: 50px;
         padding: 10px 0;
         @include media-query-mobile(1024px) {
-            width: 80px;
+            width: 60px;
         }
         img {
             width: 100%;
@@ -251,6 +251,7 @@ header {
     }
 }
 .header-active {
+    border-bottom: 1px solid $light;
     .desktop-nav {
         a {
             color: $dark !important;

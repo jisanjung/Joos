@@ -32,27 +32,21 @@ export class Menu {
 }
 
 export function toggleHeader() {
-    let prevPosition = window.pageYOffset;
-    let header = document.querySelector("header");
 
-    window.addEventListener("scroll", () => {
-        let currPosition = window.pageYOffset;
-
+    // toggle header style on scroll
+    $(window).on("scroll", function(e) {
+        var top = $(this).scrollTop();
+        
+        // header
         if (mediaQuery(1024)) {
-            if (currPosition == "0") {
-                header.style.background = "transparent";
-                header.classList.remove("header-active");
+            if (top > 1) {
+                $("header").css({"background": "#fff"});
+                $("header").addClass("header-active");
+            } else {
+                $("header").removeClass("header-active");
+                $("header").css({"top": "0px", "background": "transparent"});
             }
         }
-        
-        if (prevPosition > currPosition) {
-            header.style.top = "10px";
-        } else {
-            header.style.top = `-${header.offsetHeight}px`;
-            header.style.background = "#fff";
-            header.classList.add("header-active");
-        }
-        prevPosition = currPosition;
     });
 }
 
