@@ -47,11 +47,11 @@
     }
 }
 .menu-showcase {
-    background: url("../../../dist/images/menu.png");
+    background: url("../dist/images/menu.png");
 }
 .menu-main {
     .entrees {
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
         .description {
             .title {
                 @include center(x, relative);
@@ -96,7 +96,7 @@
         }
     }
     .section-break {
-        background: url("../../../dist/images/black-2.png") no-repeat center top;
+        background: url("../dist/images/black-2.png") no-repeat center top;
         padding-bottom: 5rem;
         position: relative;
         .description {

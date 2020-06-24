@@ -21,7 +21,7 @@
 }
 .title {
     font-weight: 500;
-    background: url("../../../dist/images/title.png");
+    background: url("../dist/images/title.png");
     width: 200px;
     height: 90px;
     position: relative;
@@ -149,7 +149,7 @@
                 color: $primary;
             }
         }
-        li:nth-child(1) {
+        .mobile-menu-active {
             a {
                 color: $primary;
             }

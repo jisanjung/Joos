@@ -1,5 +1,5 @@
 .about-showcase {
-    background: url("../../../dist/images/about.png");
+    background: url("../dist/images/about.png");
 }
 .showcase-2 {
     height: auto;
@@ -86,7 +86,7 @@
         }
     }
     .services {
-        background: $dark url("../../../dist/images/back.png") center top;
+        background: $dark url("../dist/images/back.png") center top;
         position: relative;
         .paint-stroke {
             top: -100px;

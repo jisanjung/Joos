@@ -31,7 +31,7 @@
     height: 100vh;
     @include flex-x(center);
     .home-bg {
-        background: url("../../../dist/images/home-bg.png") center center;
+        background: url("../dist/images/home-bg.png") center center;
         position: absolute;
         top: 0;
         left: 0;
@@ -318,7 +318,7 @@ main {
         }
         .quote {
             height: 560px;
-            background: url("../../../dist/images/black.png");
+            background: url("../dist/images/black.png");
             background-repeat: no-repeat;
             background-size: cover;
             @include media-query-mobile(1024px) {

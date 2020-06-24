@@ -15,10 +15,10 @@
     <!--header, nav-->
     <nav class="mobile-nav">
         <ul class="page-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">MENU</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li class="mobile-menu-active"><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <ul class="social-links">
             <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
@@ -38,10 +38,10 @@
             </div>
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#" class="active">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
                 <ul class="social-links">
                     <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
@@ -66,7 +66,7 @@
                     <h2>Best Offer</h2>
                 </div>
                 <h1 class="heading">HALF POUND <br> BURGER</h1>
-                <button type="button" class="btn-primary">MORE INFO</button>
+                <a href="#aboutID"><button type="button" class="btn-primary">MORE INFO</button></a>
             </div>
         </section>
         <div class="smoke-wrap">
@@ -79,7 +79,7 @@
     <!--main-->
     <main>
         <!--about--> 
-        <section class="about section overlap">
+        <section class="about section overlap" id="aboutID">
             <div class="paint-stroke">
                 <img src="./dist/images/paint-stroke-white.png" alt="White Paint Stroke">
             </div>
@@ -101,7 +101,7 @@
                             <li>Our secret seasoning is what makes you crave each more every time.</li>
                         </ul>
                     </p>
-                    <button type="button" class="btn-primary">ABOUT US</button>
+                    <a href="about.html"><button type="button" class="btn-primary">ABOUT US</button></a>
                 </div>
             </div>
         </section>
@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="container">
-                <button type="button" class="btn-primary">VIEW FULL MENU</button>
+                <a href="menu.html"><button type="button" class="btn-primary">VIEW FULL MENU</button></a>
             </div>
         </section>
         <!--testimonials-->
@@ -236,10 +236,10 @@
                     <h1>JOIN OUR NEWSLETTER</h1>
                     <p>Subscribe to get updates on changes in our menu, new items and more.</p>
                 </div>
-                <form>
+                <form action="https://formspree.io/xknqzdoj" method="POST">
                     <div class="section-wrap">
-                        <input type="email" class="input" placeholder="Your Email Address">
-                        <button type="button" class="btn-secondary">SUBSCRIBE</button>
+                        <input type="email" class="input" placeholder="Your Email Address" name="_replyto">
+                        <button type="submit" class="btn-secondary">SUBSCRIBE</button>
                     </div>
                 </form>
             </div>
@@ -285,10 +285,10 @@
                         <a href="#"><li><i class="fab fa-instagram"></i></li></a>
                     </ul>
                     <ul class="footer-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -305,7 +305,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./dist/slick/slick.min.js"></script>
-    <script type="module" src="./src/js/home.js"></script>
-    <script type="module" src="./src/js/main.js"></script>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>

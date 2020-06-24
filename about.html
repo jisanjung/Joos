@@ -15,10 +15,10 @@
     <!--header, nav-->
     <nav class="mobile-nav">
         <ul class="page-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">MENU</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li class="mobile-menu-active"><a href="about.html">ABOUT</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <ul class="social-links">
             <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
@@ -38,10 +38,10 @@
             </div>
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#" class="active">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
                 <ul class="social-links">
                     <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
@@ -72,7 +72,7 @@
                     </div>
                     <h1>GREAT TASTY FOOD</h1>
                     <p>From a small food truck located in the depth of New York City to opening a couple of locations in the US, we've grown a lot from when we first started. Each store consistantly replicates our iconic original recipe to the smallest detail. Our duty is to provide not only great service, but quality meals.</p>
-                    <button type="button" class="btn-primary">OUR MENU</button>
+                    <a href="menu.html"><button type="button" class="btn-primary">OUR MENU</button></a>
                 </div>
                 <div class="about-img">
                     <img src="./dist/images/about-info.png">
@@ -160,10 +160,10 @@
                     <h1>JOIN OUR NEWSLETTER</h1>
                     <p>Subscribe to get updates on changes in our menu, new items and more.</p>
                 </div>
-                <form>
+                <form action="https://formspree.io/xknqzdoj" method="POST">
                     <div class="section-wrap">
-                        <input type="email" class="input" placeholder="Your Email Address">
-                        <button type="button" class="btn-secondary">SUBSCRIBE</button>
+                        <input type="email" class="input" placeholder="Your Email Address" name="_replyto">
+                        <button type="submit" class="btn-secondary">SUBSCRIBE</button>
                     </div>
                 </form>
             </div>
@@ -209,10 +209,10 @@
                         <a href="#"><li><i class="fab fa-instagram"></i></li></a>
                     </ul>
                     <ul class="footer-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,6 +229,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./dist/slick/slick.min.js"></script>
-    <script type="module" src="./src/js/main.js"></script>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>
