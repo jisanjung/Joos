@@ -46,7 +46,7 @@ export function toggleHeader() {
         }
         
         if (prevPosition > currPosition) {
-            header.style.top = "0";
+            header.style.top = "10px";
         } else {
             header.style.top = `-${header.offsetHeight}px`;
             header.style.background = "#fff";
