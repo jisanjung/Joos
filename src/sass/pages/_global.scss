@@ -171,7 +171,7 @@
 }
 header {
     background: $white;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
@@ -191,10 +191,10 @@ header {
         }
     }
     .logo {
-        width: 50px;
+        width: 60px;
         padding: 10px 0;
         @include media-query-mobile(1024px) {
-            width: 60px;
+            width: 80px;
         }
         img {
             width: 100%;
@@ -248,29 +248,6 @@ header {
     }
     .hamburger {
         @include center(y, relative);
-    }
-}
-.header-active {
-    border-bottom: 1px solid $light;
-    .desktop-nav {
-        a {
-            color: $dark !important;
-            font-weight: bold !important;
-            &:hover {
-                color: $primary !important;
-            }
-        }
-        .social-links {
-            li {
-                background: $secondary;
-                &:hover {
-                    background: $dark;
-                }
-                i {
-                    color: $white;
-                }
-            }
-        }
     }
 }
 footer {

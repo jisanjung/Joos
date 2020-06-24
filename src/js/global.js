@@ -31,25 +31,6 @@ export class Menu {
     }
 }
 
-export function toggleHeader() {
-
-    // toggle header style on scroll
-    $(window).on("scroll", function(e) {
-        var top = $(this).scrollTop();
-        
-        // header
-        if (mediaQuery(1024)) {
-            if (top > 1) {
-                $("header").css({"background": "#fff"});
-                $("header").addClass("header-active");
-            } else {
-                $("header").removeClass("header-active");
-                $("header").css({"top": "0px", "background": "transparent"});
-            }
-        }
-    });
-}
-
 export function backToTop() {
     window.addEventListener("scroll", () => {
         let currPosition = window.pageYOffset;
